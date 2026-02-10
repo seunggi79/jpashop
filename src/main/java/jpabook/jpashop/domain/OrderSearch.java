@@ -1,4 +1,4 @@
-package jpabook.jpashop.domain.item;
+package jpabook.jpashop.domain;
 
 public class OrderSearch {
     private String memberName; //회원 이름

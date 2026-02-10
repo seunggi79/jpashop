@@ -2,9 +2,9 @@ package jpabook.jpashop.repository;
 
 import jakarta.persistence.TypedQuery;
 import jakarta.persistence.criteria.*;
-import jpabook.jpashop.domain.item.Member;
-import jpabook.jpashop.domain.item.Order;
-import jpabook.jpashop.domain.item.OrderSearch;
+import jpabook.jpashop.domain.Member;
+import jpabook.jpashop.domain.Order;
+import jpabook.jpashop.domain.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import jakarta.persistence.EntityManager;
@@ -24,7 +24,7 @@ public class OrderRepository {
         return em.find(Order.class, id);
     }
 
-    public List<Order> findAll(OrderSearch orderSearch) {
+    public List<Order> findAllByString(OrderSearch orderSearch) {
         //language=JPAQL
         String jpql = "select o From Order o join o.member m";
         boolean isFirstCondition = true;

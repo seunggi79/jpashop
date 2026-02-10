@@ -1,5 +1,6 @@
 package jpabook.jpashop.service;
 
+import jpabook.jpashop.domain.*;
 import jpabook.jpashop.domain.item.*;
 import jpabook.jpashop.exception.NotEnoughStockException;
 import jpabook.jpashop.repository.OrderRepository;
